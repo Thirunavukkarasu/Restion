@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Meta-Information -->
+    <title>Fancy REST client</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="IndustryVertical">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Vendor: Bootstrap and Font Awesome Stylesheets http://getbootstrap.com -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/angular/plugins/json-formatter/json-formatter.min.css">
+    <link rel="stylesheet" href="assets/plugins/angular/plugins/angular-material/angular-material.min.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic"> -->
+
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="assets/plugins/main.css">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="favicon.ico">    
+
+</head>
+<body ng-app="Restion" ng-cloak>
+
+    <div ng-include='"app/header.tpl.html"'></div>
+    <div ng-view></div>
+
+    <!-- Vendor: Javascripts -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+
+    <!-- Vendor: Angular, followed by our custom Javascripts -->
+    <script src="assets/plugins/angular/angular.min.js"></script>
+    <script src="assets/plugins/angular/angular-animate.min.js"></script>
+    <script src="assets/plugins/angular/angular-aria.min.js"></script>
+    <script src="assets/plugins/angular/angular-messages.min.js"></script>
+    <script src="assets/plugins/angular/angular-route.min.js"></script>
+    <script src="assets/plugins/angular/plugins/json-formatter/json-formatter.min.js"></script>
+    <script src="assets/plugins/angular/plugins/angular-material/angular-material.min.js"></script>
+
+    <!-- Our Website Javascripts -->
+    <script src="app/app.js"></script>
+    <script src="app/home/home.js"></script>
+    <script src="app/history/history.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<div class="container" id="main_container">
+	<div id="request-form" class="well">
+		<form class="form-inline">
+			<div class="form-group">
+				  <div class="input-group">
+				    <select name="method" ng-model="form.method" class="form-control" required="required">
+				      <option value="GET">GET</option>
+				      <option value="POST">POST</option>
+				      <option value="PUT">PUT</option>
+				      <option value="DELETE">DELETE</option>
+				    </select><br>				  
+				  </div>
+			</div>
+			<div class="form-group">	
+				<div class="input-group">
+					<input type="text" ng-model="form.url" class="form-control" id="url" placeholder="http://api.com" value="">
+					<span class="input-group-btn">
+						<button type="button" class="btn btn-default"><i class="fa fa-name-shape-o-direction"></i></button>
+					</span>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-success" ng-click="onClickSend(form,$event)">Send</button>
+			<button type="submit" class="btn btn-primary" ng-click="onClickSave(form,$event)">Save</button>
+		</form>
+    </div>
+
+    <div id="request-body-form" class="well">
+    	<div class="row">
+    		<div class="col-md-6">
+				<h4>Body</h4>
+      			<textarea ng-model="form.payload" id="request-body-content" placeholder="Request Body"></textarea>    			
+    		</div>
+    		<div class="col-md-6">
+				<h4>Headers</h4>
+      			<textarea ng-model="form.headers" id="request-body-content" placeholder="Request Headers"></textarea>    			
+    		</div>    		
+    	</div>
+    </div>
+
+    <md-card>
+		<md-card-header>
+		    <md-card-header-text>
+		      <span class="md-title">Response</span>
+		    </md-card-header-text>
+		</md-card-header>     
+ 		<md-card-content class="md-padding">
+            <md-tabs>
+               <md-tab id="tab1">
+                  <md-tab-label>Response Headers</md-tab-label>
+                  <md-tab-body>
+				    	<table class="table table-bordered table-striped table-hover" ng-show="responseHeaders">
+			    			<tr ng-repeat="(key,value) in responseHeaders">
+			    				<td>{{key}}</td>
+			    				<td>{{value}}</td>
+			    			</tr>
+				    	</table>                  	
+                  </md-tab-body>
+               </md-tab>
+               <md-tab id="tab2">
+                  <md-tab-label>Resonse Body(Raw)</md-tab-label>
+                  <md-tab-body>
+                  	<pre ng-show="jsonData">{{jsonData|json}}</pre>
+                  </md-tab-body>
+               </md-tab>
+               <md-tab id="tab3">
+                  <md-tab-label>Resonse Body(Tree)</md-tab-label>
+                  <md-tab-body>
+                  	 <json-formatter json="jsonData" open="3" ng-show="jsonData"></json-formatter>
+                  </md-tab-body>
+               </md-tab>
+            </md-tabs>
+         </md-card-content>    	
+    </md-card>    	
+</div>

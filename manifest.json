@@ -1,0 +1,17 @@
+{
+  "name"        : "Restion",
+  "description" : "A Fancy RESTful webservices client",
+  "version"     : "0.1",
+  "options_page": "index.html",
+  "app"         : {
+  	"background": {
+    	"scripts": [
+        "assets/plugins/angular/angular.min.js",
+        "background.js"
+      ]  
+  	}  
+  },
+  "permissions" : ["http://*/","<all_urls>","storage"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "manifest_version"        : 2
+}
